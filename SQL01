@@ -682,5 +682,62 @@ ORDER BY
         city 
 LIMIT 1);
 
+
+# Q11--
+
+SELECT  
+		DISTINCT city
+FROM
+		station        
+WHERE 
+        LEFT(city , 1) IN ('a','e','i','o','u');
+        
+# Q12--
+
+SELECT  
+		DISTINCT city
+FROM
+		station        
+WHERE 
+        RIGHT(city , 1) IN ('a','e','i','o','u');
+        
+# Q13--
+
+SELECT  
+		DISTINCT city
+FROM
+		station        
+WHERE 
+        LEFT(city , 1) NOT IN ('a','e','i','o','u');
+        
+# Q14--
+
+SELECT  
+		DISTINCT city
+FROM
+		station        
+WHERE 
+        RIGHT(city , 1) NOT IN ('a','e','i','o','u');
+	
+# Q15--
+
+SELECT  
+		DISTINCT city
+FROM
+		station        
+WHERE
+		LEFT (city , 1) NOT IN ('a','e','i','o','u')
+        OR RIGHT(city , 1) NOT IN ('a','e','i','o','u');
+        
+# Q16-- 
+
+SELECT  
+		DISTINCT city
+FROM
+		station        
+WHERE
+		LEFT (city , 1) NOT IN ('a','e','i','o','u')
+        AND RIGHT(city , 1) NOT IN ('a','e','i','o','u');
+
     
   
